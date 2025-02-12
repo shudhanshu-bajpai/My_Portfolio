@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <title>Portfolio </title>
+    <script src="email.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 <body>
    <div class="container">
@@ -57,13 +59,13 @@
             </div>
             <div class="featured-text-btn">
                 <button class="btn blue-btn">Hire Me</button>
-                <a href="https://drive.google.com/file/d/1ATm43DKq1brAYyWESY0IV3rC1cmvLVR2/view?usp=drive_link"><button class="btn">Resume <i class="uil uil-file-alt"></i></button></a>
+                <!-- <a href="https://drive.google.com/file/d/1ATm43DKq1brAYyWESY0IV3rC1cmvLVR2/view?usp=drive_link" target="_blank"><button class="btn">Resume <i class="uil uil-file-alt"></i></button></a> -->
             </div>
             <div class="social_icons">
                 <a href="https://www.instagram.com/bajpaionline/"><div class="icon" ><i class="uil uil-instagram"></i></div></a>
                 <a href="https://github.com/shudhanshu-bajpai"><div class="icon"><i class="uil uil-github-alt"></i></div></a>
-                <div class="icon"><i class="uil uil-dribbble"></i></div>
-                <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+                <!-- <div class="icon"><i class="uil uil-dribbble"></i></div> -->
+                <a href="https://www.linkedin.com/in/shudhanshu-bajpai/" target="_blank"><div class="icon"><i class="uil uil-linkedin-alt"></i></div></a>
             </div>
           </div>
           <div class="featured-image">
@@ -86,13 +88,11 @@
             <div class="col">
                 <div class="about-info">
                     <h3>My introduction</h3>
-                    <p>I am well-versed in HTML, CSS and JavaScript , and other cutting edge
-                       frameworks and libraries,which allows me to implement interactive features.
-                       Additionally, I have experirence working with content management systems (CMS) like
-                       WordPress.
+                    <p>I'm Shudhanshu Bajpai, a passionate Full-Stack Developer specializing in the MERN stack. With expertise in building scalable web applications, I focus on performance, security, and seamless user experiences. I love solving complex problems, optimizing systems, and exploring new technologies like Web3 and Cloud. Always eager to learn and innovate!
                     </p>
                     <div class="about-btn">
-                        <button class="btn">Resume <i class="uil uil-import"></i></button>
+                        <!-- <button class="btn">Resume <i class="uil uil-import"></i></button> -->
+                        <a href="https://drive.google.com/file/d/1ATm43DKq1brAYyWESY0IV3rC1cmvLVR2/view?usp=drive_link" target="_blank"><button class="btn">Resume <i class="uil uil-import"></i></button></a>
                     </div>
                 </div>
             </div>
@@ -106,7 +106,11 @@
                         <span>CSS</span>
                         <span>Bootstrap</span>
                         <span>JavaScript</span>
-                        <span>React</span>
+                        <span>React.js</span>
+                        <span>Tailwind CSS</span>
+                        <span>Material UI</span>
+                        <span>Styled Components</span>
+                        <span>Shadcn/ui</span>
                         
                     </div>
                 </div>
@@ -115,19 +119,15 @@
                         <h3>Backend</h3>
                     </div>
                     <div class="skills-list">
-                        <span>NodeJS</span>
-                        <span>Express</span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-                <div class="skills-box">
-                    <div class="skills-header">
-                        <h3>Database</h3>
-                    </div>
-                    <div class="skills-list">
-                        <span>MySQL</span>
+                        <span>Node.js</span>
+                        <span>Express.js</span>
                         <span>MongoDB</span>
+                        <span>Mongoose</span>
+                        <span>JWT (Json Web Token)</span>
+                        <span>RESTful API</span>
+                        <span>Bcrypt.js</span>
+                        <span>Socket.io</span>
+                        <span>Postman</span>
                     </div>
                 </div>
             </div>
@@ -175,20 +175,20 @@
                 <div class="contact-info">
                     <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
                     <p><i class="uil uil-envelope"></i> Email: shudhanshubajpai99@gmail.com</p>
-                    <p><i class="uil uil-phone"></i> Tel: 788091800</p>
+                    <p><i class="uil uil-phone"></i> Tel: 7880918600</p>
                 </div>
              </div>
              <div class="col">
                 <div class="form-control">
                     <div class="form-inputs">
-                        <input type="text" class="input-field" placeholder="Name">
-                        <input type="text" class="input-field" placeholder="Email">
+                        <input type="text" class="input-field" placeholder="Name" name="name">
+                        <input type="text" class="input-field" placeholder="Email" email="email">
                     </div>
                     <div class="text-area">
-                        <textarea placeholder="Message"></textarea>
+                        <textarea placeholder="Message" name="message"></textarea>
                     </div>
                     <div class="form-button">
-                        <button class="btn">Send <i class="uil uil-message"></i></button>
+                        <button class="btn" onclick="sendEmail(event)">Send <i class="uil uil-message"></i></button>
                     </div>
                 </div>
              </div>
@@ -216,10 +216,10 @@
             </ul>
         </div>
         <div class="footer-social-icons">
-            <div class="icon"><i class="uil uil-instagram"></i></div>
-            <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
-            <div class="icon"><i class="uil uil-dribbble"></i></div>
-            <div class="icon"><i class="uil uil-github-alt"></i></div>
+            <a href="https://www.instagram.com/bajpaionline/" target="_blank"><div class="icon"><i class="uil uil-instagram"></i></div></a>
+            <a href="https://www.linkedin.com/in/shudhanshu-bajpai/" target="_blank"><div class="icon"><i class="uil uil-linkedin-alt"></i></div></a>
+            <a href="#" target="_blank"><div class="icon"><i class="uil uil-dribbble"></i></div></a>
+            <a href="https://github.com/shudhanshu-bajpai" target="_blank"><div class="icon"><i class="uil uil-github-alt"></i></div></a>
         </div>
         <div class="bottom-footer">
             <p>Copyright &copy; <a href="#home" style="text-decoration: none;">shudhanshu Bajpai</a> - All rights reserved</p>
