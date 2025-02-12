@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <title>Portfolio </title>
-    <script src="email.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
 </head>
 <body>
    <div class="container">
@@ -179,14 +180,14 @@
              <div class="col">
                 <div class="form-control">
                     <div class="form-inputs">
-                        <input type="text" class="input-field" placeholder="Name" name="name">
-                        <input type="text" class="input-field" placeholder="Email" email="email">
+                        <input type="text" class="input-field" placeholder="Name" name="name" id="name">
+                        <input type="text" class="input-field" placeholder="Email" email="email" id="email">
                     </div>
                     <div class="text-area">
-                        <textarea placeholder="Message" name="message"></textarea>
+                        <textarea placeholder="Message" name="message" id="text"></textarea>
                     </div>
                     <div class="form-button">
-                        <button class="btn" onclick="sendEmail(event)">Send <i class="uil uil-message"></i></button>
+                        <button id="btn" class="btn" onclick="fun()">Send <i class="uil uil-message"></i></button>
                     </div>
                 </div>
              </div>
@@ -224,6 +225,8 @@
         </div>
     </footer>
     </div>
+    <script src="./email.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script>
